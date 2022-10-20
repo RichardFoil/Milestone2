@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn
+          aloha from calypso branch
         </a>
       </header>
     </div>
