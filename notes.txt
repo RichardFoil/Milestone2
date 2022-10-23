@@ -1,0 +1,3 @@
+ /Users/lawrencegraham/Desktop/mongodb-macos-x86_64-6.0.1\ 2/bin 
+
+ ./mongod --dbpath "/Users/lawrencegraham/Documents/data/db" 
