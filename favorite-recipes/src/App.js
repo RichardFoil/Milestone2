@@ -1,25 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom'
+
+import RecipeGallery from './recipeGallery';
+import AddRecipe from './recipeAdd';
+import DeleteRecipe from './recipeDelete';
+import UpdateRecipe from './recipeUpdate';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  
+  return <div className='App'>
+    <h2>The point of our database is to be able to share your favorite recipes with others!visit the existing recipe gallery or add your recipe now!</h2>
+    <Router>
+      <header>
+        <div className='navBar'>
+          <h1>OUR FAVORITE RECIPE DATABASE</h1>
+          <ul>
+            <li>
+              <Link to='/'>HOME PAGE</Link>
+            </li>
+            <li>
+              <Link to='/gallery'>RECIPE GALLERY</Link>
+            </li>
+            <li>
+            <Link to='/add'>RECIPE ADD</Link>
+            </li>
+            <li>
+            <Link to='/update'>RECIPE UPDATE</Link>
+            </li>
+            <li>
+            <Link to='/delete'>RECIPE DELETE</Link>
+            </li>
+          </ul>
+        </div>
+      </header> 
+     <div className='display'>
+        <Routes>
+          <Route path='/gallery' element={<RecipeGallery />} />
+          <Route path='/add' element={<AddRecipe />} />
+          <Route path='/update' element={<UpdateRecipe />} />
+          <Route path='/delete' element={<DeleteRecipe />} />
+        </Routes>
+      </div>
+    </Router> 
+    
+  </div>
 }
 
 export default App;
