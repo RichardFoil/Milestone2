@@ -1,6 +1,6 @@
 import react from "react";
-function deleteRecipe() {
+function DeleteRecipe() {
     return 'hello'
 }
 
-export default deleteRecipe
+export default DeleteRecipe

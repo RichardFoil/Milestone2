@@ -1,9 +1,6 @@
 {
   "dependencies": {
-<<<<<<< HEAD
     "bootstrap": "^5.2.2",
-=======
->>>>>>> 9bfff6803568590c81aacec46b4b07c0ab494b4d
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "react": "^18.2.0",

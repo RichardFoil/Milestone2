@@ -1,6 +1,6 @@
 import react from "react";
-function updateRecipe() {
+function UpdateRecipe() {
     return 'hello'
 }
 
-export default updateRecipe
+export default UpdateRecipe
