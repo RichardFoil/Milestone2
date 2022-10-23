@@ -6,12 +6,17 @@ import DeleteRecipe from './recipeDelete';
 import UpdateRecipe from './recipeUpdate';
 
 function App() {
+  
   return <div className='App'>
+    <h2>The point of our database is to be able to share your favorite recipes with others!visit the existing recipe gallery or add your recipe now!</h2>
     <Router>
       <header>
         <div className='navBar'>
           <h1>OUR FAVORITE RECIPE DATABASE</h1>
           <ul>
+            <li>
+              <Link to='/'>HOME PAGE</Link>
+            </li>
             <li>
               <Link to='/gallery'>RECIPE GALLERY</Link>
             </li>
@@ -26,8 +31,8 @@ function App() {
             </li>
           </ul>
         </div>
-      </header>
-      <div className='display'>
+      </header> 
+     <div className='display'>
         <Routes>
           <Route path='/gallery' element={<RecipeGallery />} />
           <Route path='/add' element={<AddRecipe />} />
@@ -35,8 +40,8 @@ function App() {
           <Route path='/delete' element={<DeleteRecipe />} />
         </Routes>
       </div>
-    </Router>
-    <h2>The point of our database is to be able to share your favrite recipes with others! Click the buttons below to visit the existing recipe gallery or to add yours now!</h2>
+    </Router> 
+    
   </div>
 }
 
