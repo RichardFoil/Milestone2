@@ -11,6 +11,6 @@ const recipeSchema = new Schema({
     image: { type: String, defualt: 'https://place-puppy.com/300x300'},
 })
 
-const Recipe = mongoose.model('Favorite recipes', recipeSchema)
+const Recipe = mongoose.model('recipes', recipeSchema)
 
 module.exports = Recipe
