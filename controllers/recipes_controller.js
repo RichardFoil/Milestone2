@@ -1,6 +1,6 @@
 const express = require('express')
 const recipes = express.Router()
-const recipes = require('../models/recipes.js')
+//const recipes = require('../models/recipes.js')
     
     //index routes
 recipes.get('/', (req, res) => {
@@ -24,8 +24,8 @@ recipes.post('/', (req, res) => {
       //edit route
       .get('/:id/edit', (req, res) => {
     
-      })},)
-    
+      })
+      
   
 
 
