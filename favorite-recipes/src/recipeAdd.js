@@ -29,11 +29,6 @@ function AddRecipe() {
                 <Form.Control  type="text" placeholder="Instructions" />
             </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formGridAllergies">
-                <Form.Label>Allergies</Form.Label>
-                <Form.Control  type="text" placeholder="Allergies" />
-            </Form.Group>
-
             <Row className="mb-3">
             <Form.Group className="mb-3" id="formGridCheckbox">
                 <Form.Check type="checkbox" label="Vegan" />
@@ -58,7 +53,7 @@ function AddRecipe() {
             </Form.Group>
 
             <Form.Group className="mb-3" id="formGridCheckbox">
-                <Form.Check type="checkbox" label="Diner" />
+                <Form.Check type="checkbox" label="Dinner" />
             </Form.Group>
 
             <Form.Group className="mb-3" id="formGridCheckbox">
