@@ -8,9 +8,9 @@ const recipeSchema = new Schema({
     ingredients: { type: String, require: true},
     instructions: {type: String},
     isBreakfast: Boolean, isDinner: Boolean, isDessert: Boolean,
-    image: { type: String, defualt: 'https://place-puppy.com/300x300'},
+    
 })
 
-const Recipe = mongoose.model('recipes', recipeSchema)
+const Recipes = mongoose.model('recipes', recipeSchema)
 
-module.exports = Recipe
+module.exports = Recipes;

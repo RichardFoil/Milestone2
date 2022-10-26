@@ -4,8 +4,9 @@ const Recipes = require("../models/models.js");
 
 //index routes
 recipes.get("/", async (req, res) => {
-  console.log("WE SMACKED RECIPES ROUTE!!!");
+  console.log("WE SMACKED THE /recipes route!!");
   const foundRecipes = await Recipes.find();
+  console.log("datataaa from db", foundRecipes);
   res.json(foundRecipes);
 });
 

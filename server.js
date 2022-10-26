@@ -3,7 +3,7 @@ const express = require('express')
 const app = express()
 const PORT = 4000
 const mongoose = require('mongoose')
-
+const recipesController = require("./controllers/recipes_controller");
 
 
 console.log('MONGU URL!!', process.env.MONGO_URI)
@@ -12,10 +12,6 @@ console.log('MONGU URL!!', process.env.MONGO_URI)
 mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true}, 
   () => { console.log('connected to mongo: ', process.env.MONGO_URI) }
 )
-
-
-
-const recipesController = require("./controllers/recipes_controller");
 
 app.use("/recipes",recipesController)
 
