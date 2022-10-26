@@ -18,7 +18,7 @@ function App() {
               <Link to='/'>HOME PAGE</Link>
             </li>
             <li>
-              <Link to='/gallery'>RECIPE GALLERY</Link>
+              <Link to='/gallery' onClick>RECIPE GALLERY</Link>
             </li>
             <li>
             <Link to='/add'>RECIPE ADD</Link>
