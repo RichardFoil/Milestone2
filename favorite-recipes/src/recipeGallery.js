@@ -21,7 +21,7 @@ function RecipeGallery() {
             <button onClick={getData}>Grab recipes!</button>
             {state.map((eachThing)=> {
                 return (
-                    <h1>{eachThing.title}</h1>
+                    <h1>{}</h1>
                 )
             })}
         
