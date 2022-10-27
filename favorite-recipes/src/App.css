@@ -1,0 +1,49 @@
+.NavBar{
+    margin: 1em;
+    padding: auto;
+}
+ul{
+    margin: auto;
+}
+li{
+   display: inline-flex;
+   text-align: center;
+    padding: .5em;
+}
+h1{
+    justify-content: center;
+    text-align: center;
+}
+form{
+    width: 80%;
+    padding: 2em;
+    background-color: lavenderblush;
+    border: 4px dotted pink;
+    border-radius: 12px;
+}
+.TypeOfMeal{
+    background-color: aqua;
+    display: flex;
+    padding: 1em;
+}
+.allergies{
+    background-color: beige;
+    display: flex;
+    padding: 1em;
+}
+.instructions{
+    background-color: blueviolet;
+    display: inline-block;
+    padding: 1em;
+}
+.ingredients{
+    background-color: brown;
+    display: inline-block;
+    padding: 1em;
+}
+.NamePart{
+    background-color: aliceblue;
+    display: flex;
+    padding: 1em;
+    justify-content: space-between;
+}
