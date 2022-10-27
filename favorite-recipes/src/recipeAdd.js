@@ -7,7 +7,7 @@ import Row from 'react-bootstrap/Row';
 function AddRecipe() {
     return (
         <Form>
-            <Row className="mb-3">
+            <Row className="mb-3 NamePart">
                 <Form.Group as={Col} controlId="formGirdChefName">
                 <Form.Label>Chef Name:</Form.Label>
                 <Form.Control type="name" placeholder="Chef's name" />
@@ -19,17 +19,18 @@ function AddRecipe() {
                 </Form.Group>
             </Row>
 
-            <Form.Group className="mb-3" controlId="formGridIngredients">
+            <Form.Group className="mb-3 ingredients" controlId="formGridIngredients">
                 <Form.Label>Ingredients</Form.Label>
                 <Form.Control type="text" placeholder="Ingredients" />
             </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formGridInstructions">
+            <Form.Group className="mb-3 instructions" controlId="formGridInstructions">
                 <Form.Label>Instructions</Form.Label>
                 <Form.Control  type="text" placeholder="Instructions" />
             </Form.Group>
 
-            <Row className="mb-3">
+            <Row className="mb-3 allergies">
+
             <Form.Group className="mb-3" id="formGridCheckbox">
                 <Form.Check type="checkbox" label="Vegan" />
             </Form.Group>
@@ -47,7 +48,7 @@ function AddRecipe() {
             </Form.Group>
             </Row>
 
-            <Row className="mb-3">
+            <Row className="mb-3 TypeOfMeal">
             <Form.Group className="mb-3" id="formGridCheckbox">
                 <Form.Check type="checkbox" label="Breakfast" />
             </Form.Group>
