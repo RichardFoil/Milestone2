@@ -6,8 +6,10 @@ import Row from 'react-bootstrap/Row';
 
 function AddRecipe() {
     return (
-        <Form>
-            <Row className="mb-3 NamePart">
+
+        <Form action="/recipes" method="POST">
+            <Row className="mb-3">
+
                 <Form.Group as={Col} controlId="formGirdChefName">
                 <Form.Label>Chef Name:</Form.Label>
                 <Form.Control type="name" placeholder="Chef's name" />

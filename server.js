@@ -3,8 +3,13 @@ const app = express()
 const PORT = 4000
 const mongoose = require('mongoose')
 const recipesController = require("./controllers/recipes_controller");
+const path = require('path')
 
 require('dotenv').config()
+
+// so i can see req.body in post routes
+app.use(express.json())
+
 
 // Mongoose
 mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true}, 
@@ -12,6 +17,8 @@ mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopolo
 )
 
 app.use("/recipes",recipesController)
+
+app.use(express.static(path.join(__dirname, 'favorite-recipes', 'build')))
 
 
 app.get('/', (req, res) => {
