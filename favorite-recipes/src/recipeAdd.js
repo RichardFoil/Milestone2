@@ -59,8 +59,10 @@ function AddRecipe() {
     
 
     return (
+
         <Form action="/gallery" method="GET">
             <Row className="mb-3">
+
                 <Form.Group as={Col} controlId="formGirdChefName">
                 <Form.Label>Chef Name:</Form.Label>
                 <Form.Control onChange={(e) => setChef(e.target.value)} type="name" placeholder="Chef's name" />
@@ -72,17 +74,18 @@ function AddRecipe() {
                 </Form.Group>
             </Row>
 
-            <Form.Group className="mb-3" controlId="formGridIngredients">
+            <Form.Group className="mb-3 ingredients" controlId="formGridIngredients">
                 <Form.Label>Ingredients</Form.Label>
                 <Form.Control onChange={(e) => setIngredients(e.target.value)}   type="text" placeholder="Ingredients" />
             </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formGridInstructions">
+            <Form.Group className="mb-3 instructions" controlId="formGridInstructions">
                 <Form.Label>Instructions</Form.Label>
                 <Form.Control onChange={(e) => setInstructions(e.target.value)}   type="text" placeholder="Instructions" />
             </Form.Group>
 
-            <Row className="mb-3">
+            <Row className="mb-3 allergies">
+
             <Form.Group className="mb-3" id="formGridCheckbox">
                 <Form.Check onChange={(e) => setIsVegan(!isVegan)} type="checkbox" label="Vegan" />
             </Form.Group>
@@ -100,7 +103,7 @@ function AddRecipe() {
             </Form.Group>
             </Row>
 
-            <Row className="mb-3">
+            <Row className="mb-3 TypeOfMeal">
             <Form.Group className="mb-3" id="formGridCheckbox">
                 <Form.Check onChange={(e) => setIsBreakfast(!isBreakfast)} type="checkbox" label="Breakfast" />
             </Form.Group>
