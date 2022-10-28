@@ -3,23 +3,22 @@ import RecipeGallery from './recipeGallery';
 import AddRecipe from './recipeAdd';
 import DeleteRecipe from './recipeDelete';
 import UpdateRecipe from './recipeUpdate';
+import './App.css'
 
 function App() {
   
+
   return (
   <div className='App'>
     <h1> HELLLOO!</h1>
      <h2>The point of our database is to be able to share your favorite recipes with others!visit the existing recipe gallery or add your recipe now!</h2>
     <Router>
       <header>
-        <div className='navBar'>
-          <h1>OUR FAVORITE RECIPE DATABASE</h1>
+        <div className='NavBar'>
+          <h1 className='header'>OUR FAVORITE RECIPE DATABASE</h1>
           <ul>
             <li>
-              <Link to='/'>HOME PAGE</Link>
-            </li>
-            <li>
-              <Link to='/gallery' onClick>RECIPE GALLERY</Link>
+              <Link to='/gallery'>RECIPE GALLERY</Link>
             </li>
             <li>
             <Link to='/add'>RECIPE ADD</Link>
@@ -42,7 +41,7 @@ function App() {
         </Routes>
       </div>
     </Router> 
-    
+     
   </div>
   )
 }
