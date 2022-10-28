@@ -1,34 +1,33 @@
-const express = require('express')
-const recipes = express.Router()
-//const recipes = require('../models/recipes.js')
-    
-    //index routes
-recipes.get('/', (req, res) => {
+const express = require("express");
+const recipes = express.Router();
+const Recipes = require("../models/models.js");
 
-    res.json({message: 'Get all the recipes'})
-})
+//index routes
+recipes.get("/", async (req, res) => {
+  console.log("WE SMACKED THE /recipes route!!");
+  const foundRecipes = await Recipes.find();
+  console.log("datataaa from db", foundRecipes);
+  res.json(foundRecipes);
+});
 
-        //show route 
-recipes.get('/:id', (req, res) => {
+//show route
+recipes.get("/:id", async (req, res) => {
+  const foundRecipes = await Recipes.findById(req.params.id);
+  res.json(foundRecipes);
+});
+// post route
+recipes.post("/", async (req, res) => {
+  const foundRecipes = await Recipes.create(req.body);
+  res.json(foundRecipes);
+});
 
-    res.json({message: 'Get One the recipes'})
-})
-        // post route
-recipes.post('/', (req, res) => {
-   res.json({message: 'Create route hit!! recipes!!'})
-  })
+//delete route
+recipes.delete("/:id", async (req, res) => {
+  const foundRecipes = await Recipes.findById(req.params.id);
+  res.json(foundRecipes);
+});
 
-        //delete route
-  recipes.delete('/:id', (req, res) => {
-    res.json({message: 'Delete this route!! recipes!!'})
-      })
+//edit route
+recipes.get("/:id/edit", (req, res) => {});
 
-      //edit route
-      breads.get('/:id/edit', (req, res) => {
-    
-      })
-      
-  
-
-
-module.exports = recipes
+module.exports = recipes;
