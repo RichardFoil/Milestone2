@@ -1,49 +1,78 @@
+/*.App for the title and any rendering*/
+.App {
+    background-color: aliceblue;
+}
+/*html is for hole body page*/
+html {
+    background-color: aliceblue;
+    justify-content: center;
+    text-align: center;
+}
+/*logo and nav bar*/
 .NavBar{
+    background-color: brown;
     margin: 1em;
     padding: auto;
 }
+/*render spot*/
+.display{
+    background-color: black;
+    text-align:  center;
+}
+/*WHOLE nav space */
 ul{
     margin: auto;
+    background-color: blue;
+    justify-content: center;
 }
+/*JUST the nav pieces*/
 li{
    display: inline-flex;
    text-align: center;
     padding: .5em;
+    background-color: blueviolet;
 }
+/*logo*/
 h1{
     justify-content: center;
     text-align: center;
 }
+/*whole form*/
 form{
-    width: 80%;
-    padding: 2em;
+    width: 35rem;
+    padding: 1em;
     background-color: lavenderblush;
     border: 4px dotted pink;
+    justify-content: center;
     border-radius: 12px;
 }
+/*meal time checkboxes*/
 .TypeOfMeal{
-    background-color: aqua;
     display: flex;
     padding: 1em;
+    justify-content: center;
 }
+/*Allergy checkboxes*/
 .allergies{
-    background-color: beige;
+    justify-content: center;
     display: flex;
     padding: 1em;
 }
-.instructions{
-    background-color: blueviolet;
-    display: inline-block;
-    padding: 1em;
-}
-.ingredients{
-    background-color: brown;
-    display: inline-block;
-    padding: 1em;
-}
+/*chef name and recipe name*/
 .NamePart{
-    background-color: aliceblue;
+    text-align: center;
     display: flex;
     padding: 1em;
     justify-content: space-between;
+}
+/*for instructions and ingridients*/
+.directions{
+    text-align: center;
+    display: flex;
+    padding: 1em;
+    justify-content: space-between;
+}
+/*submit button*/
+.button {
+    background-color: plum;
 }
