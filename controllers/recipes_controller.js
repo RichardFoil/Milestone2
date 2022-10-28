@@ -17,6 +17,7 @@ recipes.get("/:id", async (req, res) => {
 });
 // post route
 recipes.post("/", async (req, res) => {
+    console.log(req.body)
   const foundRecipes = await Recipes.create(req.body);
   res.json(foundRecipes);
 });
@@ -28,6 +29,6 @@ recipes.delete("/:id", async (req, res) => {
 });
 
 //edit route
-recipes.get("/:id/edit", (req, res) => {});
+recipes.get("/:id/update", (req, res) => {});
 
 module.exports = recipes;
