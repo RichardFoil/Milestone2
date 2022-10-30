@@ -1,0 +1,34 @@
+import {useState} from 'react';
+
+function GrabData() {
+    const [recipesData, setRecipesData] = useState([])
+    // const data = await fetch('/recipes', requestOptions)
+    // const cleanData = await data.json()
+    
+    // }
+
+    const grabData = async () => {
+        const dataFromBackend = await fetch('/recipes')
+        const cleanDataFromBackend = await dataFromBackend.json()
+
+        console.log(cleanDataFromBackend)
+
+        setRecipesData(cleanDataFromBackend)
+    }
+
+    return(
+
+        <div>
+            <button onClick={grabData}>Grab All Recipes!</button>
+            {recipesData.map((eachThing)=> {
+                return (
+                    <h1>{eachThing.title}</h1>
+                )
+            })}
+        </div>
+    );
+
+}
+
+
+export default GrabData;
