@@ -1,6 +1,8 @@
 /*.App for the title and any rendering*/
 .App {
     background-color: aliceblue;
+    justify-content: center;
+    text-align: center;
 }
 /*html is for hole body page*/
 html {
@@ -16,8 +18,7 @@ html {
 }
 /*render spot*/
 .display{
-    background-color: black;
-    text-align:  center;
+    display: inline-block;
 }
 /*WHOLE nav space */
 ul{
@@ -44,6 +45,7 @@ form{
     background-color: lavenderblush;
     border: 4px dotted pink;
     justify-content: center;
+    text-align: center;
     border-radius: 12px;
 }
 /*meal time checkboxes*/
