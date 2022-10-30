@@ -19,8 +19,6 @@ function AddRecipe() {
     const [isDessert, setIsDesset] = useState(false)
     const [recipes, setRecipes] = useState([])
     
-    console.log('STATE for chef!', isDessert)
-
     const grabRecipes = async () => {
         const recipes = await fetch('/recipes')
         const cleanRecipe = await recipes.json()

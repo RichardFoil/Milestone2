@@ -12,6 +12,7 @@ recipes.get("/", async (req, res) => {
 
 //show route
 recipes.get("/:id", async (req, res) => {
+  console.log('We sacked the grab single recipe route!', req.params.id)
   const foundRecipes = await Recipes.findById(req.params.id);
   res.json(foundRecipes);
 });
@@ -24,11 +25,15 @@ recipes.post("/", async (req, res) => {
 
 //delete route
 recipes.delete("/:id", async (req, res) => {
-  const foundRecipes = await Recipes.findById(req.params.id);
+  const foundRecipes = await Recipes.findByIdAndDelete(req.params.id);
   res.json(foundRecipes);
 });
 
 //edit route
-recipes.get("/:id/update", (req, res) => {});
+recipes.put("/:id/update", async (req, res) => {
+  console.log('Up date route smacked!!')
+  const foundRecipes = await Recipes.findByIdAndUpdate(req.params.id, req.body);
+  res.json(foundRecipes);
+});
 
 module.exports = recipes;
