@@ -1,5 +1,4 @@
-import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom'
-
+import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
 import RecipeGallery from './recipeGallery';
 import AddRecipe from './recipeAdd';
 import DeleteRecipe from './recipeDelete';
@@ -8,8 +7,12 @@ import './App.css'
 
 function App() {
   
-  return <div className='App'>
-   <Router>
+
+  return (
+  <div className='App'>
+    <h1> HELLLOO!</h1>
+     <h2>The point of our database is to be able to share your favorite recipes with others!visit the existing recipe gallery or add your recipe now!</h2>
+    <Router>
       <header>
         <div className='NavBar'>
           <h1 className='header'>OUR FAVORITE RECIPE DATABASE</h1>
@@ -40,6 +43,7 @@ function App() {
     </Router> 
      
   </div>
+  )
 }
 
 export default App;
