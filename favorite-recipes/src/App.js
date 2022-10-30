@@ -23,12 +23,12 @@ function App() {
             <li>
             <Link to='/add'>RECIPE ADD</Link>
             </li>
-            <li>
-            <Link to='/update'>RECIPE UPDATE</Link>
+            {/* <li>
+            <Link to='/update/:id'>RECIPE UPDATE</Link>
             </li>
             <li>
             <Link to='/delete'>RECIPE DELETE</Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       </header> 
@@ -36,7 +36,7 @@ function App() {
         <Routes>
           <Route path='/gallery' element={<RecipeGallery />} />
           <Route path='/add' element={<AddRecipe />} />
-          <Route path='/update' element={<UpdateRecipe />} />
+          <Route path='/update/:id' element={<UpdateRecipe />} />
           <Route path='/delete' element={<DeleteRecipe />} />
         </Routes>
       </div>

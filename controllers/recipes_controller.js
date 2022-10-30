@@ -28,6 +28,7 @@ recipes.post("/add", async (req, res) => {
 
 //show route
 recipes.get("/:id", async (req, res) => {
+  console.log('We sacked the grab single recipe route!', req.params.id)
   const foundRecipes = await Recipes.findById(req.params.id);
   res.json(foundRecipes);
 });
@@ -40,19 +41,11 @@ recipes.post("/", async (req, res) => {
 
 //delete route
 recipes.delete("/:id", async (req, res) => {
-  const foundRecipes = await Recipes.delete(req.params.id);
+  const foundRecipes = await Recipes.findByIdAndDelete(req.params.id);
   res.json(foundRecipes);
 });
 
 //edit route
-
-recipes.get("/:id/edit", async (req, res) => {
-  console.log('WE HIT THE EDIT!!!')
-  const foundRecipes = await Recipes.findByIdAndUpdate(req.params.id, { dish: req.body })
-  res.json(foundRecipes);
-});
-
-
-
+recipes.get("/:id/update", (req, res) => {});
 
 module.exports = recipes;

@@ -18,7 +18,10 @@ html {
 }
 /*render spot*/
 .display{
-    display: inline-block;
+
+  /*  background-color: black; */
+    text-align:  center;
+
 }
 /*WHOLE nav space */
 ul{
