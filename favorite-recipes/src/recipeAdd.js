@@ -76,10 +76,7 @@ function AddRecipe() {
                 </Form.Group>
             </Row>
             <Row className="mb-3 directions">
-                <Form.Group className="mb-3 ingredients" controlId="formGridIngredients">
-                    <Form.Label>Ingredients Needed: </Form.Label>
-                    <Form.Control type="text" placeholder="Ingredients" />
-                </Form.Group>
+             </Row>
 
 
             <Form.Group className="mb-3 ingredients" controlId="formGridIngredients">
