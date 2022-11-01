@@ -35,7 +35,7 @@ function App() {
         <Routes>
           <Route path='/gallery' element={<RecipeGallery />} />
           <Route path='/add' element={<AddRecipe />} />
-          <Route path='/update' element={<UpdateRecipe />} />
+          <Route path='/update/:id' element={<UpdateRecipe />} />
           <Route path='/delete' element={<DeleteRecipe />} />
         </Routes>
       </div>

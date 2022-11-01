@@ -14,7 +14,10 @@ html {
 }
 /*render spot*/
 .display{
-    display: inline-block;
+
+  /*  background-color: black; */
+    text-align:  center;
+
 }
 
 /*for hovering over nav buttons*/
