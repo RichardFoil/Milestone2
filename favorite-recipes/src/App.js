@@ -10,25 +10,24 @@ function App() {
 
   return (
   <div className='App'>
-    <h1> HELLLOO!</h1>
-     <h2>The point of our database is to be able to share your favorite recipes with others!visit the existing recipe gallery or add your recipe now!</h2>
+     <h2>Welcome to our database that keeps track of your favorite recipes!</h2>
     <Router>
       <header>
         <div className='NavBar'>
-          <h1 className='header'>OUR FAVORITE RECIPE DATABASE</h1>
+          <h1 className='header'>YOUR FAVORITE RECIPE DATABASE</h1>
           <ul>
             <li>
-              <Link to='/gallery'>RECIPE GALLERY</Link>
+              <Link className='link' to='/gallery'>RECIPE GALLERY</Link>
             </li>
             <li>
-            <Link to='/add'>RECIPE ADD</Link>
-            </li>
-            {/* <li>
-            <Link to='/update/:id'>RECIPE UPDATE</Link>
+            <Link className='link' to='/add'>RECIPE ADD</Link>
             </li>
             <li>
-            <Link to='/delete'>RECIPE DELETE</Link>
-            </li> */}
+            <Link className='link' to='/gallery'>RECIPE UPDATE</Link>
+            </li>
+            <li>
+            <Link className='link' to='/gallery'>RECIPE DELETE</Link>
+            </li>
           </ul>
         </div>
       </header> 
