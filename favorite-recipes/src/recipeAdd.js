@@ -61,7 +61,6 @@ function AddRecipe() {
 
 
     return (
-
         <Form action="/gallery" method="GET">
             <Row className="mb-3 NamePart">
 
@@ -78,8 +77,11 @@ function AddRecipe() {
                 </Form.Group>
             </Row>
             <Row className="mb-3 directions">
-             </Row>
 
+ <Form.Group className="mb-3 ingredients" controlId="formGridIngredients">
+                    <Form.Label>Ingredients Needed: </Form.Label>
+                    <Form.Control type="text" placeholder="Ingredients" />
+                </Form.Group>
 
                 <Form.Group className="mb-3 instructions" controlId="formGridInstructions">
                     <Form.Label>Instructions: </Form.Label>
@@ -127,8 +129,9 @@ function AddRecipe() {
 
                 Submit
             </Button>
-        </Form>
-    )
-};
+        </Form> 
+        )
+    }
+    
 
-export default AddRecipe
+export default AddRecipe;

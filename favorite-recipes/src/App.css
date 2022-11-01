@@ -1,6 +1,9 @@
 /*.App for the title and any rendering*/
 .App {
-    
+    background-color: aliceblue;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 /*html is for hole body page*/
 html {
@@ -10,20 +13,23 @@ html {
 }
 /*logo and nav bar*/
 .NavBar{
+    margin: 1em;
+    padding: auto;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: lavenderblush;
+    border: 4px dotted pink;
+    border-radius: 12px;
+    box-shadow: 12px 12px thistle;
+    margin-bottom: 3em;
 }
 /*render spot*/
 .display{
-
-  /*  background-color: black; */
-    text-align:  center;
-
+    display: inline-block;
 }
-
 /*for hovering over nav buttons*/
 li :hover{
-    background-color:cornflowerblue ;
-    border: 3px dotted;
+    background-color:rgb(140, 170, 227) ;
+    border: 3px dotted rgb(174, 194, 232);
     border-radius: 5px;
 }
 /*for the links in the nav bar*/
@@ -53,7 +59,7 @@ h1{
 h2{
     justify-content: center;
     text-align: center;
-   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 /*whole form*/
 form{
@@ -61,10 +67,20 @@ form{
     padding: 1em;
     background-color: lavenderblush;
     border: 4px dotted pink;
-    justify-content: center;
     text-align: center;
     border-radius: 12px;
     box-shadow: 12px 12px thistle;
+    align-items: center;
+}
+input[type=text]{
+    border-radius: 8px;
+    border: 3px dotted pink;
+    background-color: lavenderblush;
+}
+input[type=name]{
+    border-radius: 8px;
+    border: 3px dotted pink;
+    background-color: lavenderblush;
 }
 /*meal time checkboxes*/
 .TypeOfMeal{
@@ -90,9 +106,23 @@ form{
     display: flex;
     padding: 1em;
 }
-/*submit button*/
+/*submit buttons*/
 .button {
-    background-color: cornflowerblue;
-    border-radius: 5em;
-    border: 1px dotted;
+    width: 8em;
+    background-color: rgb(140, 170, 227);
+    border-radius: 8px;
+    border: 5px dotted rgb(174, 194, 232);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+/*attempting gallery styling*/
+.GallerySpot{
+    width: 55rem;
+    padding: 1em;
+    background-color: lavenderblush;
+    border: 4px dotted pink;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 12px 12px thistle;
+    align-items: center;
 }
