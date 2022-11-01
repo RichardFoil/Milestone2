@@ -1,8 +1,6 @@
 /*.App for the title and any rendering*/
 .App {
-    background-color: aliceblue;
-    justify-content: center;
-    text-align: center;
+    
 }
 /*html is for hole body page*/
 html {
@@ -12,18 +10,29 @@ html {
 }
 /*logo and nav bar*/
 .NavBar{
-    background-color: brown;
-    margin: 1em;
-    padding: auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 /*render spot*/
 .display{
     display: inline-block;
 }
+
+/*for hovering over nav buttons*/
+li :hover{
+    background-color:cornflowerblue ;
+    border: 3px dotted;
+    border-radius: 5px;
+}
+/*for the links in the nav bar*/
+.link{
+    color: black;
+    text-decoration: none;
+    border: none;
+}
 /*WHOLE nav space */
 ul{
     margin: auto;
-    background-color: blue;
+    padding-bottom: 1em;
     justify-content: center;
 }
 /*JUST the nav pieces*/
@@ -31,12 +40,17 @@ li{
    display: inline-flex;
    text-align: center;
     padding: .5em;
-    background-color: blueviolet;
 }
 /*logo*/
 h1{
     justify-content: center;
     text-align: center;
+}
+/*blurb at top above logo*/
+h2{
+    justify-content: center;
+    text-align: center;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 /*whole form*/
 form{
@@ -47,6 +61,7 @@ form{
     justify-content: center;
     text-align: center;
     border-radius: 12px;
+    box-shadow: 12px 12px thistle;
 }
 /*meal time checkboxes*/
 .TypeOfMeal{
@@ -64,17 +79,17 @@ form{
 .NamePart{
     text-align: center;
     display: flex;
-    padding: 1em;
-    justify-content: space-between;
+    padding: 1.17em;
 }
 /*for instructions and ingridients*/
 .directions{
     text-align: center;
     display: flex;
     padding: 1em;
-    justify-content: space-between;
 }
 /*submit button*/
 .button {
-    background-color: plum;
+    background-color: cornflowerblue;
+    border-radius: 5em;
+    border: 1px dotted;
 }

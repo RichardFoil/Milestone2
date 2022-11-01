@@ -20,18 +20,18 @@ function UpdateRecipe({recipe}) {
                 <Form.Control type="text" placeholder="Recipe Name" defaultValue={recipe.dish} />
                 </Form.Group>
             </Row>
-
+            <Row className="mb-3 directions">
             <Form.Group className="mb-3" controlId="formGridIngredients">
-                <Form.Label>Ingredients</Form.Label>
+                <Form.Label>Ingredients Needed: </Form.Label>
                 <Form.Control type="text" placeholder="Ingredients" defaultValue={recipe.ingredients} />
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formGridInstructions">
-                <Form.Label>Instructions</Form.Label>
+                <Form.Label>Instructions: </Form.Label>
                 <Form.Control  type="text" placeholder="Instructions" defaultValue={recipe.instructions} />
             </Form.Group>
-
-            <Row className="mb-3">
+</Row>
+            <Row className="mb-3 allergies">
             <Form.Group className="mb-3" id="formGridCheckbox">
                 <Form.Check type="checkbox" label="Vegan" defaultChecked={recipe.isVegan} />
             </Form.Group>
@@ -49,7 +49,7 @@ function UpdateRecipe({recipe}) {
             </Form.Group>
             </Row>
 
-            <Row className="mb-3">
+            <Row className="mb-3 TypeOfMeal">
             <Form.Group className="mb-3" id="formGridCheckbox">
                 <Form.Check type="checkbox" label="Breakfast" defaultChecked={recipe.isBreakfast} />
             </Form.Group>
@@ -63,7 +63,7 @@ function UpdateRecipe({recipe}) {
             </Form.Group>
             </Row>
 
-            <Button variant="primary" type="update">
+            <Button className="button" variant="primary" type="update">
                 Update
             </Button>
         </Form>
