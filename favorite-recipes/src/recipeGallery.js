@@ -36,8 +36,8 @@ function RecipeGallery() {
 
   //GALLERY
   return (
-    <div>
-      <button onClick={getData}>Grab recipes!</button>
+    <div className="GallerySpot">
+      <button className="button" onClick={getData}>Grab recipes!</button>
       {state.map((recipe) => {
         return (
           <div>
@@ -112,8 +112,8 @@ function RecipeGallery() {
               )}{" "}
               Dessert.
             </h4>
-            <Link to={`/update/${recipe._id}`}>update</Link>
-            <button onClick={() => remove(recipe._id)}> Delete</button>
+            <Link className="link" to={`/update/${recipe._id}`}>update</Link>
+            <button className="button" onClick={() => remove(recipe._id)}> Delete</button>
           </div>
         );
       })}
