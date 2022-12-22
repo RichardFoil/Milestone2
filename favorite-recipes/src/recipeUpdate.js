@@ -69,7 +69,7 @@ function UpdateRecipe({ recipe }) {
   }
   return (
     
-    <Form action="/gallery" method="GET">
+    <Form action="/" method="POST">
       <Row className="mb-3">
         <Form.Group as={Col} controlId="formGirdChefName">
           <Form.Label>Chef Name:</Form.Label>

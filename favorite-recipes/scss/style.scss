@@ -1,0 +1,116 @@
+@import "formConfig";
+@import "navConfig";
+@import "config";
+
+
+
+.App {
+  &, html {
+    background-color: $background-color;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.NavBar {
+  background-color: $nav-bar-color;
+  margin: 1em;
+  padding: auto;
+  ul {
+    margin: auto;
+    background-color: $nav-ul-color;
+    justify-content: center;
+    li {
+      display: inline-flex;
+      text-align: center;
+      padding: .5em;
+      background-color: $nav-li-color;
+      &:hover {
+        background-color: lighten($nav-li-color, 10%);
+      }
+    }
+  }
+}
+
+// SCSS mixins
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}
+
+@mixin flex-container {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin text-center {
+  text-align: center;
+}
+
+// SCSS functions
+@function em($size) {
+  @return $size * 1em;
+}
+
+@function rem($size) {
+  @return $size * 1rem;
+}
+
+// SCSS flow control
+.display {
+  @if (lightness(black) > 50) {
+    background-color: black;
+  } @else {
+    background-color: white;
+  }
+  text-align: center;
+}
+
+.NamePart {
+    @include text-center;
+    @include flex-container;
+    padding: em(1);
+    justify-content: space-between;
+    color: $partial-variable;
+  }
+  
+  // SCSS error handling
+  .button {
+    background-color: $button-bg-color;
+    @if $button-bg-color == plum {
+      @include border-radius(rem(12));
+    } @else {
+      @warn "The expected button background color is plum.";
+      @include border-radius(rem(6));
+    }
+  }
+  //use mixins
+  .TypeOfMeal {
+    @include flex-container;
+    padding: em(1);
+  }
+  
+  .allergies {
+    @include flex-container;
+    padding: em(1);
+  }
+  
+  form {
+    width: 35rem;
+    padding: em(1);
+    background-color: $form-bg-color;
+    border: $form-border-width $form-border-style $form-border-color;
+    @include text-center;
+    @include border-radius($form-border-radius);
+  }
+  
+  .directions {
+    @include text-center;
+    @include flex-container;
+    padding: em(1);
+    justify-content: space-between;
+  }
+  
+  h1 {
+    justify-content: center;
+    text-align: center;
+  }

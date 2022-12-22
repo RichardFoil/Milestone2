@@ -3,7 +3,7 @@ import RecipeGallery from './recipeGallery';
 import AddRecipe from './recipeAdd';
 import DeleteRecipe from './recipeDelete';
 import UpdateRecipe from './recipeUpdate';
-import './App.css'
+import '../css/style.css'
 
 function App() {
   
