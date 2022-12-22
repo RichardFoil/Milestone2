@@ -1,0 +1,78 @@
+.App, .App html {
+  background-color: aliceblue;
+  justify-content: center;
+  text-align: center;
+}
+
+.NavBar {
+  background-color: brown;
+  margin: 1em;
+  padding: auto;
+}
+.NavBar ul {
+  margin: auto;
+  background-color: blue;
+  justify-content: center;
+}
+.NavBar ul li {
+  display: inline-flex;
+  text-align: center;
+  padding: 0.5em;
+  background-color: blueviolet;
+}
+.NavBar ul li:hover {
+  background-color: #a358e8;
+}
+
+.display {
+  background-color: white;
+  text-align: center;
+}
+
+.NamePart {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+  justify-content: space-between;
+  color: red;
+}
+
+.button {
+  background-color: plum;
+  border-radius: 12rem;
+}
+
+.TypeOfMeal {
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+}
+
+.allergies {
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+}
+
+form {
+  width: 35rem;
+  padding: 1em;
+  background-color: lavenderblush;
+  border: 4px dotted pink;
+  text-align: center;
+  border-radius: 12px;
+}
+
+.directions {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+  justify-content: space-between;
+}
+
+h1 {
+  justify-content: center;
+  text-align: center;
+}
