@@ -69,6 +69,22 @@ function UpdateRecipe({ recipe }) {
     console.log('We updated!', cleanData)
     getData()
   }
+  
+  interface state {
+    chef: string;
+    dish: string;
+    ingredients: string[];
+    instructions: string[];
+    hasGluten: boolean;
+    hasPeanuts: boolean;
+    isVegan: boolean;
+    isVegitarian: boolean;
+    isBreakfast: boolean;
+    isDinner: boolean;
+    isDessert: boolean;
+    _id: string;
+  }
+
   return (
     
     <Form action="/" method="POST">
@@ -153,7 +169,7 @@ function UpdateRecipe({ recipe }) {
 
         <Form.Group className="mb-3" id="formGridCheckbox">
           <Form.Check
-            onChange={(e) => setIsDesset(!isDessert)}
+            onChange={(e) => setIsDesset(!state.isDessert)}
             type="checkbox"
             label="Dessert"
             defaultChecked={state.isDessert}
@@ -161,7 +177,7 @@ function UpdateRecipe({ recipe }) {
         </Form.Group>
       </Row>
 
-      <Button onClick={update} variant="primary" type="update">
+      <Button onClick={update} variant="primary" type="submit">
         Update
       </Button>
     </Form>

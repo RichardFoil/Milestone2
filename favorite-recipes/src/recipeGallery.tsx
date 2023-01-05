@@ -36,10 +36,25 @@ function RecipeGallery() {
   };
 
   //GALLERY
+  interface Recipe {
+    chef: string;
+    dish: string;
+    ingredients: string[];
+    instructions: string[];
+    hasGluten: boolean;
+    hasPeanuts: boolean;
+    isVegan: boolean;
+    isVegitarian: boolean;
+    isBreakfast: boolean;
+    isDinner: boolean;
+    isDessert: boolean;
+    _id: string;
+  }
+  
   return (
     <div className="GallerySpot">
       <button className="button" onClick={getData}>Grab recipes!</button>
-      {state.map((recipe) => {
+      {state.map((recipe: Recipe) => {
         return (
           <div>
             <h1>
